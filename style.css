@@ -158,6 +158,7 @@ a:focus-visible, button:focus-visible {
   margin-bottom: 0.6rem;
 }
 .project h2 { font-size: 1.4rem; font-weight: 600; }
+.badges { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
 .tag {
   font-family: var(--mono);
   font-size: 0.78rem;
@@ -167,7 +168,91 @@ a:focus-visible, button:focus-visible {
   border-radius: 4px;
   white-space: nowrap;
 }
+.status {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  padding: 0.22rem 0.55rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  border: 1px solid var(--border);
+}
+.status-ongoing { color: var(--accent); border-color: var(--accent-dim); }
+.status-complete { color: #7EE787; border-color: #2a4a30; }
+.status-deployed { color: #79C0FF; border-color: #253b52; }
+
 .project p { color: var(--ink-dim); max-width: 62ch; }
+
+/* LIVE DEMO */
+.live-demo {
+  margin-top: 1.25rem;
+  padding: 1.1rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.demo-label {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-dim);
+  margin-bottom: 0.8rem;
+}
+.demo-controls {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.demo-controls select {
+  flex: 1;
+  min-width: 180px;
+  background: var(--bg);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.55rem 0.7rem;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+}
+.demo-controls button {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--bg);
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.demo-controls button:hover { opacity: 0.85; }
+.demo-output {
+  margin-top: 1rem;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+}
+.demo-output .result-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+}
+.demo-output .result-row:last-child { border-bottom: none; }
+.demo-output .score { color: var(--accent); }
+.demo-output .placeholder { color: var(--ink-dim); }
+
+/* SCROLL REVEAL */
+.project {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.project.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .project { opacity: 1; transform: none; transition: none; }
+}
 
 /* SKILLS */
 .skills-grid {

@@ -46,7 +46,10 @@
     <article class="project">
       <div class="project-head">
         <h2>StabiliFi</h2>
-        <span class="tag">Python · FastAPI · SQL</span>
+        <div class="badges">
+          <span class="tag">Python · FastAPI · SQL</span>
+          <span class="status status-ongoing">Ongoing</span>
+        </div>
       </div>
       <p>A financial risk-scoring pipeline that turns raw transaction history into an interpretable Financial Stability Score — built on engineered behavioral features rather than a black-box model, so every score can be explained.</p>
     </article>
@@ -54,15 +57,30 @@
     <article class="project">
       <div class="project-head">
         <h2>Persona</h2>
-        <span class="tag">Python · TF-IDF · REST APIs</span>
+        <div class="badges">
+          <span class="tag">Python · TF-IDF · REST APIs</span>
+          <span class="status status-complete">Complete</span>
+        </div>
       </div>
       <p>A content-based recommendation engine using TF-IDF and cosine similarity to surface relevant items from lexical patterns — the first step toward a semantic, embedding-based version.</p>
+
+      <div class="live-demo">
+        <p class="demo-label">// try it — this runs the actual TF-IDF logic in your browser, right now</p>
+        <div class="demo-controls">
+          <select id="movie-select"></select>
+          <button id="recommend-btn">Get recommendations</button>
+        </div>
+        <div id="demo-output" class="demo-output" aria-live="polite"></div>
+      </div>
     </article>
 
     <article class="project">
       <div class="project-head">
         <h2>DevFolio</h2>
-        <span class="tag">HTML5 · CSS3 · JavaScript</span>
+        <div class="badges">
+          <span class="tag">HTML5 · CSS3 · JavaScript</span>
+          <span class="status status-deployed">Deployed</span>
+        </div>
       </div>
       <p>This site — a hand-built, dependency-free portfolio focused on fast load, accessible markup, and motion that respects reduced-motion preferences.</p>
     </article>
