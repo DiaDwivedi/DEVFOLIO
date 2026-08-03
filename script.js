@@ -164,6 +164,22 @@ if (movieSelect && recommendBtn && demoOutput) {
 }
 
 // ---------------------------------------------------------------------
+// Sticky nav background on scroll.
+// ---------------------------------------------------------------------
+const siteNav = document.getElementById('site-nav');
+if (siteNav) {
+  const toggleNavBg = () => {
+    if (window.scrollY > 40) {
+      siteNav.classList.add('scrolled');
+    } else {
+      siteNav.classList.remove('scrolled');
+    }
+  };
+  window.addEventListener('scroll', toggleNavBg, { passive: true });
+  toggleNavBg();
+}
+
+// ---------------------------------------------------------------------
 // Scroll reveal for project cards, using IntersectionObserver.
 // ---------------------------------------------------------------------
 if (!prefersReducedMotion && 'IntersectionObserver' in window) {
