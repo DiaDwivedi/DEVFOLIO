@@ -204,6 +204,24 @@ a:focus-visible, button:focus-visible {
 
 .project p { color: var(--ink-dim); max-width: 62ch; }
 
+.project-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.1rem;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+}
+.project-links a {
+  color: var(--ink-dim);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 3px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.project-links a:hover {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+
 /* LIVE DEMO */
 .live-demo {
   margin-top: 1.25rem;
