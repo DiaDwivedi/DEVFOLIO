@@ -72,10 +72,10 @@
         <h2>StabiliFi</h2>
         <div class="badges">
           <span class="tag">Python · FastAPI · SQL</span>
-          <span class="status status-ongoing">Ongoing</span>
+          <span class="status status-complete">Complete</span>
         </div>
       </div>
-      <p>A financial risk-scoring pipeline that turns raw transaction history into an interpretable Financial Stability Score — built on engineered behavioral features rather than a black-box model, so every score can be explained.</p>
+            <p>A financial risk-scoring pipeline that turns raw transaction history into a 0–100 stability index from three weighted features — savings rate, expense volatility, and income regularity. Volatility uses median absolute deviation rather than standard deviation, so one large outlier doesn't dominate the score, and an Isolation Forest anomaly ratio scales it rather than triggering a hard rule. Moving feature engineering and inference out of the request path into pre-computation took average latency from ~376 ms to ~106 ms, with cache hits at 2–4 ms.</p>
       <div class="project-links">
         <a href="STABILIFI_REPO_URL" target="_blank" rel="noopener">source ↗</a>
       </div>
