@@ -346,3 +346,31 @@ a:focus-visible, button:focus-visible {
   .cursor { animation: none; }
   .cta { transition: none; }
 }
+/* MOBILE NAV */
+@media (max-width: 620px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem 6vw;
+  }
+  .nav-logo {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .nav-links {
+    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .nav-links a { font-size: 0.82rem; }
+  .nav-links .resume-link { padding: 0.3rem 0.6rem; }
+}
+
+/* Prevent horizontal scroll */
+html, body { overflow-x: hidden; }
+
+@media (max-width: 480px) {
+  .terminal { font-size: 0.75rem; }
+  .terminal-body { padding: 1rem; }
+  .skills-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+}
